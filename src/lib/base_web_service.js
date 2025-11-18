@@ -1,10 +1,12 @@
 import axios from 'axios';
 import { user } from './user_store';
-import { get } from 'svelte/store';
-import config from './config';
+import { env } from '$env/dynamic/public';import { get } from 'svelte/store';
+
+//import config from './config';
 //const IP = 'http://192.168.222.73';
 //const APP_NAME = 'Bucim';
-const URL_SQL_EXEC = `${config.IP}/${config.APP_NAME}/api/sql/exec`;
+//const URL_SQL_EXEC = `${config.IP}/${config.APP_NAME}/api/sql/exec`;
+const URL_SQL_EXEC = `${env.PUBLIC_API_IP}/${env.PUBLIC_API_NAME}/api/sql/exec`;
 console.log(URL_SQL_EXEC);
 function getAuthConfig() {
 	const userValue = get(user);

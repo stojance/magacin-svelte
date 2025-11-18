@@ -123,8 +123,8 @@
 		margin-bottom: 5px;
 	}
 	.filter-stavki {
-		min-height: 250px;
-		height: 55vh;/*calc(100vh - 18em);*/
+		min-height: 500px;
+		height: 65vh;/*calc(100vh - 18em);*/
 		overflow-y: auto;
 		width: 100%;
 	}
