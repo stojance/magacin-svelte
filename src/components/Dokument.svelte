@@ -14,7 +14,8 @@
 		MT_LoadIzleziNeKontrolirani,
 		MT_saveInsIzlezKontrola
 	} from '../lib/bucim_web_service.js';
-	import { blur } from 'svelte/transition';
+	import { blur, fade } from 'svelte/transition';
+	import { flip } from 'svelte/animate';
 	import { onMount } from 'svelte';
 
 	export let dokument = null;
@@ -192,7 +193,7 @@
 			{:else if listaStavki && listaStavki.length > 0}
 				<ul>
 					{#each listaStavki as item, index (item)}
-						<li transition:blur>
+						<li animate:flip={{ duration: 300 }}>
 							<div class="row g-2">
 								<div class="col-12 col-sm-12">
 									<Card

@@ -2,6 +2,7 @@
 	import { Spinner, Card } from '@sveltestrap/sveltestrap';
 	import { MT_LoadIzleziNeKontrolirani, MT_loadMagacini } from '../lib/bucim_web_service.js';
 	import { blur } from 'svelte/transition';
+	import { flip } from 'svelte/animate';
 	import { createEventDispatcher, onMount } from 'svelte';
 
 	const dispatch = createEventDispatcher();
@@ -84,7 +85,7 @@
 		{:else if listaDokumenti && listaDokumenti.length > 0}
 			<ul>
 				{#each listaDokumenti as item (item)}
-					<li transition:blur>
+					<li animate:flip={{ duration: 300 }}>
 						<div class="row g-2">
 							<div class="col-12 col-sm-12">
 								<Card body on:click={() => handleClick(item)} style="cursor: pointer; padding: 5px;">
