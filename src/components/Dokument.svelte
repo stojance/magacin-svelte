@@ -240,7 +240,7 @@
 		</div>
 	</ModalBody>
 	<ModalFooter>
-		<Button color="success" on:click={() => kontroliraj(barKod)}>Потврди</Button>
+		<Button color="primary" on:click={() => kontroliraj(barKod)}>Потврди</Button>
 		<Button
 			color="secondary"
 			on:click={() => {
