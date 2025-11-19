@@ -171,6 +171,7 @@
 				<div class="row-col-12 text-danger text-center h4 mt-0">
 					{error}
 					<br />
+					<br />
 					<Button
 						color="info"
 						bind:inner={elementButtonProdolzi}
