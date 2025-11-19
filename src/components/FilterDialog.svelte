@@ -9,8 +9,8 @@
 	export let selectedItem = null;
 
 	const toggle = () => {
-		fullscreen = undefined;
 		open = !open;
+		fullscreen = undefined;
 	};
 
 	const handleSelect = (event) => {

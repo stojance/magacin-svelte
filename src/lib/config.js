@@ -1,4 +1,4 @@
-const IP = 'http://192.168.222.73';
+const IP = 'http://192.168.224.73';
 //bucim:
 //const IP = 'http://192.168.50.7';
 //borov-dol:

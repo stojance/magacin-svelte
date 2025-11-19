@@ -71,7 +71,7 @@
 	<title>Најава</title>
 </svelte:head>
 <div class="center bg-white" style="margin-top: 150px;">
-	<h3 style="margin-bottom: 15px;" class="text-center">Најава</h3>
+	<h3 class="text-center border-bottom text-primary mb-2">Најава</h3>
 	<form on:submit|preventDefault={handleLogin}>
 		<FormGroup floating label="PIN">
 			<Input
@@ -86,8 +86,8 @@
 		</FormGroup>
 
 		<FormGroup style="margin-top:20px;">
-			<Button color="primary" disabled={!$myForm.valid} type="submit">Најава</Button>
-			<Button type="reset" on:click={handleReset} color="secondary" style="float: right;">Откажи</Button>
+			<Button type="submit" color="primary" disabled={!$myForm.valid}>Најава</Button>
+			<Button type="reset" color="secondary" on:click={handleReset} style="float: right;">Откажи</Button>
 		</FormGroup>
 	</form>
 </div>
