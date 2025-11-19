@@ -9,8 +9,11 @@
 	} from '../../lib/bucim_web_service.js';
 	import { Spinner, Toast } from '@sveltestrap/sveltestrap';
 	import { auth_guard } from '../../lib/auth_guard.js';
-
-	auth_guard('/artikli');
+	
+	console.log('artikli', location.pathname);
+	//auth_guard('/artikli');
+	auth_guard(location.pathname);
+	
 	let modal = false;
 	let item = {};
 	let elementArtikal;

@@ -2,7 +2,7 @@
 	import { goto } from "$app/navigation";
 	import { auth_guard } from "../lib/auth_guard.js";
 
-	auth_guard('/');
+	auth_guard(location.pathname);
 </script>
 
 <svelte:head>

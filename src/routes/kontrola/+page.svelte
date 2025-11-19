@@ -3,7 +3,8 @@
 	import ListaDokumenti from '../../components/ListaDokumenti.svelte';
 	import { auth_guard } from '../../lib/auth_guard.js';
 
-	auth_guard('/kontrola');
+	//auth_guard('/kontrola');
+	auth_guard(location.pathname);
 	let dokument = null;
 	let magacin_id = 0;
 	function handleDokumentSelect(event) {
