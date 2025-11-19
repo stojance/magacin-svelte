@@ -81,3 +81,7 @@ button, a {
 input:focus {
     background-color: lightyellow !important;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}

@@ -99,12 +99,11 @@
 			<Card
 				body
 				on:click={() => handleSelectItem(item)}
-				style="cursor: pointer; margin-bottom: 2px; padding: 5px; {id === item.sifraID
-					? 'border: 2px solid black;'
-					: null}"
+				class="cursor-pointer mb-2 p-2"
+				style={id === item.sifraID ? 'border: 2px solid black; background-color: whitesmoke;' : null}
 			>
 				<div class="row g-0" style="font-size: small;">
-					<div class="col-12 col-sm-12 ">
+					<div class="col-12 col-sm-12">
 						{item.sifraID}
 						{#if item.pcode.length > 1}
 							&nbsp;&nbsp;(<b>{item.pcode}</b>)
@@ -124,7 +123,7 @@
 	}
 	.filter-stavki {
 		min-height: 500px;
-		height: 65vh;/*calc(100vh - 18em);*/
+		height: 65vh; /*calc(100vh - 18em);*/
 		overflow-y: auto;
 		width: 100%;
 	}
