@@ -220,8 +220,9 @@
 	{/if}
 </div>
 {#if error && !isLoading}
-	<div class="row-col-12 text-danger text-center h4 mt-0">
+	<div class="row-col-12 text-danger text-center h4 mt-0" transition:blur>
 		{error}
+		<br />
 		<br />
 		<button
 			class="btn btn-info btn-lg"

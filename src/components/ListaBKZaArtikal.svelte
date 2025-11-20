@@ -68,14 +68,14 @@
 
 <div class="container">
 	{#if error && !isLoading}
-		<div class="text-danger text-center h3">{error}</div>
+		<div class="text-danger text-center h3" transition:blur>{error}</div>
 	{/if}
 	{#if isLoading}
 		<Spinner type="grow" color="primary" class="text-center" />
 	{:else if listaBK && listaBK.length > 0}
 		<ul>
 			{#each listaBK as item (item.barKod)}
-				<li transition:blur>
+				<li transition:blur animate:flip={{ delay: 500 }}>
 					<div class="row g-2" style="width: 95%;">
 						<div class="col-11 col-sm-11 pl-0 pr-1 pt-0 pb-0">
 							<Card body class="text-center">{item.barKod}</Card>
@@ -99,7 +99,9 @@
 			{/each}
 		</ul>
 	{:else}
-		<div class="text-center h5 mt-4 text-gray-400">Нема баркодови за овој артикал</div>
+		<div class="text-center h5 mt-4 text-gray-400" transition:blur={{ duration: 500 }}>
+			Нема баркодови за овој артикал
+		</div>
 	{/if}
 
 	<Modal isOpen={open} {toggle}>

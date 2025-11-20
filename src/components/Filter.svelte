@@ -10,6 +10,8 @@
 		Card
 	} from '@sveltestrap/sveltestrap';
 	import VirtualScroll from 'svelte-virtual-scroll-list';
+	import { blur, fade } from 'svelte/transition';
+	import { flip } from 'svelte/animate';
 
 	const dispatch = createEventDispatcher();
 	let dataList = [];
@@ -100,9 +102,11 @@
 				body
 				on:click={() => handleSelectItem(item)}
 				class="cursor-pointer mb-2 p-2"
-				style={id === item.sifraID ? 'border: 2px solid black; background-color: whitesmoke;' : null}
+				style={id === item.sifraID
+					? 'border: 2px solid black; background-color: whitesmoke;'
+					: null}
 			>
-				<div class="row g-0" style="font-size: small;">
+				<div class="row g-0" style="font-size: small;" transition:blur>
 					<div class="col-12 col-sm-12">
 						{item.sifraID}
 						{#if item.pcode.length > 1}

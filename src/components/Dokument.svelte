@@ -193,7 +193,7 @@
 			{:else if listaStavki && listaStavki.length > 0}
 				<ul>
 					{#each listaStavki as item, index (item)}
-						<li animate:flip={{ duration: 300 }}>
+						<li transition:blur animate:flip={{ delay: 500 }}>
 							<div class="row g-2">
 								<div class="col-12 col-sm-12">
 									<Card
